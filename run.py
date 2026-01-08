@@ -19,6 +19,12 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+# Log calls with payloads
+@app.before_request
+def log_request():
+    if request.data:
+        logger.info(f"Incoming {request.method} with Request Body: {request.get_json()}")
+
 # Load JSON data into application memory
 with open("data/employees.json") as employee_data:
     app.config['EMPLOYEE_DATA'] = json.load(employee_data)
