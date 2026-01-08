@@ -1,9 +1,12 @@
 from flask import Flask, jsonify
 from app.routes import routes_bp
 import json
+import logging
 
 app = Flask(__name__)
 app.register_blueprint(routes_bp, url_prefix="/api")
+
+# Configure logging
 
 # Load JSON data into application memory
 with open("data/employees.json") as employee_data:
