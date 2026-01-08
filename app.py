@@ -1,6 +1,10 @@
 from flask import Flask
-app = Flask(__name__)
+from app.routes import routes_bp
 
+app = Flask(__name__)
+app.register_blueprint(routes_bp, url_prefix="/api")
+
+# App health check
 @app.route("/")
 def home():
     return {
