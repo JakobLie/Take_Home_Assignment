@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from app.routes import routes_bp
 import json
 import logging
@@ -6,7 +6,18 @@ import logging
 app = Flask(__name__)
 app.register_blueprint(routes_bp, url_prefix="/api")
 
-# Configure logging
+# Configure logging at INFO level
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        # Log to file "app.log" and to console
+        logging.FileHandler('app.log'),
+        logging.StreamHandler()
+    ]
+)
+
+logger = logging.getLogger(__name__)
 
 # Load JSON data into application memory
 with open("data/employees.json") as employee_data:
