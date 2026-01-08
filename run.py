@@ -15,10 +15,9 @@ def home():
     return {
         'message': 'API is running',
         'endpoints': [
-            'GET /api/<tbc>',
-            'POST /api/<tbc>',
-            'PUT /api/<tbc>',
-            'DELETE /api/<tbc>'
+            'GET /api/employee/<int:employee_id>',
+            'POST /api/employee',
+            'DELETE /api/employee/<int:employee_id>'
         ],
         'employees': app.config['EMPLOYEE_DATA']
     }
