@@ -6,6 +6,7 @@ import logging
 app = Flask(__name__)
 app.register_blueprint(routes_bp, url_prefix="/api")
 
+# Task 2: Log down all requests to the backend.
 # Configure logging at INFO level
 logging.basicConfig(
     level=logging.INFO,
@@ -33,7 +34,7 @@ with open("data/employees.json") as employee_data:
 @app.route("/")
 def home():
     return {
-        'message': 'API is running',
+        'message': 'App is running',
         'endpoints': [
             'GET /api/employee/<int:employee_id>',
             'POST /api/employee',
