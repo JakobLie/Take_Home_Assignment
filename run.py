@@ -6,7 +6,7 @@ import logging
 
 
 app = Flask(__name__)
-app.register_blueprint(routes_bp)
+app.register_blueprint(routes_bp, url_prefix='/api')
 
 # Task 5: Dependency Injection
 # Create service and inject it into routes
