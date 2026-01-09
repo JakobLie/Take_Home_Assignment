@@ -40,7 +40,7 @@ DELETE /api/employee/{id}
 
 ## Postman Collection
 
-Import the included `Take_Home_Assignment.postman_collection.json` file to test all endpoints locally.
+Import the included `postman_collection.json` file to test all endpoints locally.
 
 ## Running Tests
 
