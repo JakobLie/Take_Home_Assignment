@@ -2,31 +2,31 @@
     {
         "id": 1,
         "name": "Alice Tan",
-        "email": "alice.tan@example.com",
+        "email": "alice.tan@gmail.com",
         "phone": "+65 9123 4567"
     },
     {
         "id": 2,
         "name": "Ben Lim",
-        "email": "ben.lim@example.com",
+        "email": "ben.lim@gmail.com",
         "phone": "+65 9234 5678"
     },
     {
         "id": 3,
         "name": "Cheryl Ng",
-        "email": "cheryl.ng@example.com",
+        "email": "cheryl.ng@gmail.com",
         "phone": "+65 9345 6789"
     },
     {
         "id": 4,
         "name": "Daniel Koh",
-        "email": "daniel.koh@example.com",
+        "email": "daniel.koh@gmail.com",
         "phone": "+65 9456 7890"
     },
     {
         "id": 5,
         "name": "Emily Goh",
-        "email": "emily.goh@example.com",
+        "email": "emily.goh@gmail.com",
         "phone": "+65 9567 8901"
     }
 ]
