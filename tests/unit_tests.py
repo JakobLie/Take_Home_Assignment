@@ -1,4 +1,6 @@
 
+# Isolated testing of routes with mocking
+
 import sys 
 import os 
  
@@ -82,7 +84,7 @@ class TestEmployeeRoutes(unittest.TestCase):
 
         # Mock the service response
         mock_employee = {
-            "id": 6, # Since json data contains 5 employee objects, and id should AUTO_INCREMENT
+            "id": 6,
             "name": "Jason Liew",
             "email": "jason.liew@gmail.com",
             "phone": "+65 9512 8122"
@@ -213,7 +215,7 @@ class TestEmployeeRoutes(unittest.TestCase):
         mock_delete.assert_called_once_with(6)
     
     @patch('app.routes.EmployeeService.delete_by_id')
-    def test_delete_employee_by_id_failure(self, mock_delete):
+    def test_delete_employee_by_id_not_found(self, mock_delete):
         """ Test DELETE /api/employee/<id> returns failed to delete error """
 
         # Mock the service response

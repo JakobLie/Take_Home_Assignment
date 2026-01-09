@@ -31,7 +31,7 @@ class EmployeeService:
         for field in required_fields:
             if field not in payload:
                 return None, ({"error": f"Missing required field '{field}'"}, 422)
-            if payload[field] is None:
+            if payload[field].strip() is None or payload[field].strip()=="":
                 return None, ({"error": f"Field '{field}' cannot be empty"}, 422)
             
         # Check that unique details (email, phone) are not already in data

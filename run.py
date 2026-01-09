@@ -20,7 +20,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-# Log calls with payloads
+# Additionally, log payloads of requests
 @app.before_request
 def log_request():
     if request.data:
