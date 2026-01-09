@@ -63,7 +63,7 @@ class TestEmployeeServices(unittest.TestCase):
     # ======================== GET INTEGRATION TESTS ===============================
     # ==============================================================================
 
-    def test_get_employeea_by_id_success(self):
+    def test_get_employee_by_id_success(self):
         """ Test GET /api/employee/<id> returns employee object successfully """
 
         # Call the route

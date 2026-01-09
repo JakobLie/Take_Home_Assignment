@@ -1,10 +1,17 @@
 from flask import Flask, jsonify, request
-from app.routes import routes_bp
+from app.routes import routes_bp, inject_employee_service
+from app.services import EmployeeService
 import json
 import logging
 
+
 app = Flask(__name__)
 app.register_blueprint(routes_bp, url_prefix="/api")
+
+# Task 5: Dependency Injection
+# Create service and inject it into routes
+employee_service = EmployeeService()
+inject_employee_service(employee_service)
 
 # Task 2: Log down all requests to the backend.
 # Configure logging at INFO level

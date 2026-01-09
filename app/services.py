@@ -4,6 +4,7 @@ from flask import current_app
 class EmployeeService:
     """ Handles employee data operations """
 
+    @staticmethod
     def get_by_id(employee_id):
         """ GET employee object by id """
 
@@ -16,6 +17,7 @@ class EmployeeService:
         # If not found, return None
         return None, ({"error": f"Employee with id {employee_id} not found"}, 404)
         
+    @staticmethod    
     def create(payload):
         """ CREATE new employee object """
 
@@ -56,7 +58,8 @@ class EmployeeService:
             return new_employee, None
         except Exception as e:
             return None, ({"error": f"Failed to create employee object:{str(e)}"}, 500)
-        
+
+    @staticmethod   
     def delete_by_id(employee_id):
         """ DELETE employee object by id """
 
