@@ -4,6 +4,8 @@ from app.services import EmployeeService
 # Create blueprint
 routes_bp = Blueprint('routes', __name__)
 
+# Add dependency injection
+
 # ================================================================================
 # ============================ EMPLOYEE ROUTES ===================================
 # ================================================================================
