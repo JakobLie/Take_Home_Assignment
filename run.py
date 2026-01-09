@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from app.routes import routes_bp, inject_employee_service
 from app.services import EmployeeService
 import json
@@ -6,6 +7,7 @@ import logging
 
 
 app = Flask(__name__)
+CORS(app)
 app.register_blueprint(routes_bp, url_prefix='/api')
 
 # Task 5: Dependency Injection
