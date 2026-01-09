@@ -20,7 +20,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         # Log to file "app.log" and to console
-        logging.FileHandler('app.log'),
+        # logging.FileHandler('app.log'),
         logging.StreamHandler()
     ]
 )
